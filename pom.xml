@@ -10,7 +10,7 @@
   <name>group1_projectC</name>
   <url>http://www.myorganization.org</url>
 
-  <properties>
+ <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -26,7 +26,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
 
@@ -35,6 +35,13 @@
       <artifactId>beast-spark</artifactId>
       <version>${beast.version}</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-mllib_${scala.compat.version}</artifactId>
+      <version>${spark.version}</version>
+    </dependency>
+
 
     <dependency>
       <groupId>org.scala-lang</groupId>
@@ -53,8 +60,9 @@
       <groupId>org.apache.spark</groupId>
       <artifactId>spark-sql_${scala.compat.version}</artifactId>
       <version>${spark.version}</version>
-   </dependency>
+    </dependency>
   </dependencies>
+
 
   <build>
     <plugins>
@@ -133,3 +141,4 @@
     </profile>
   </profiles>
 </project>
+
